@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/83087b65bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./styles/mobile.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./image_resources/favicon/think-saga-fav.jpg"
+      type="image/x-icon"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header role="navigation" class="header-nav">
+      <figure class="img-container">
+        <img
+          src="./image_resources/think-saga-light-logo.png"
+          alt="think-saga-logo"
+          class="logo"
+        />
+      </figure>
+      <div class="social">
+        <a href="https://facebook.com/thinksaga" target="_blank"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a href="https://twitter.com/thinksaga" target="_blank"
+          ><i class="fab fa-twitter fa-2x"></i
+        ></a>
+        <a href="https://instagram.com/thinksaga" target="_blank"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="container padding-2 article-grid">
+        <section id="article" class="content card">
+          <figure>
+            <img
+              id="article-img"
+              src="./image_resources/articles/ent1.jpg"
+              alt="man with vr headset"
+            />
+          </figure>
+          <h1 id="title">Lorem ipsum dolor</h1>
+          <div class="meta">
+            <i class="fas fa-user">
+              <span id="author"></span>
+            </i>
+            <div id="category" class="category"></div>
+          </div>
+          <p id="body"></p>
+        </section>
+        <aside class="categories card">
+          <h2>categories</h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Investment</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Technology</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Entertainment</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Business</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Activities</a>
+            </li>
+          </ul>
+        </aside>
+        <aside class="grid card">
+          <h2>Join Our Club</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+            officia!
+          </p>
+          <a href="" class="btn">Join Now</a>
+        </aside>
+      </div>
+      <script type="module" src="./scripts/localStorage.js"></script>
+      <script type="module" src="./scripts/01_controller.js"></script>
+      <!-- <script type="module" src="./scripts/index.js"></script> -->
+    </main>
+  </body>
+</html>
