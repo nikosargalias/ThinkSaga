@@ -12,6 +12,7 @@ html * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .category {
@@ -25,7 +26,16 @@ body {
   background-color: var(--light-color);
   line-height: 1.5;
   color: var(--dark-color);
-  overflow: auto;
+}
+
+body * {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main - to compensate for fixed header */
+main {
+  padding: 8vh 0vh 0vh 0vh;
 }
 
 a {
@@ -81,13 +91,9 @@ p {
 }
 
 input {
-  font-size: 1rem;
   padding: 1rem 0.2rem;
-  font-family: "Poppins", sans-serif;
 }
 textarea {
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
   padding: 0rem 0.2rem;
 }
 
@@ -211,26 +217,21 @@ textarea {
 
 /* header nav */
 .header-nav {
+  position: fixed;
+  z-index: 1000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 8vh;
   height: 8vh;
   justify-items: center;
+  justify-content: center;
   align-items: center;
-  margin: auto;
   background-color: var(--dark-color);
   color: var(--light-color);
 }
+
 .header-nav img {
   transform: scale(0.5);
-}
-
-.header-nav .social {
-  margin: auto;
-}
-
-.header-nav .social i {
-  color: white;
 }
 
 .header-nav .social a {
@@ -244,15 +245,10 @@ textarea {
 }
 .header-nav .nav-links a {
   text-decoration: none;
-  color: var(--dark-color);
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 400;
+  letter-spacing: 2px;
   font-size: 1.2rem;
-  background-color: var(--primary-dark-color);
-  color: var(--light-color);
-  border-radius: 3px;
-  padding: 10px 10px;
-  margin: 1rem;
+  margin: 1vw;
 }
 
 /* hero */
@@ -275,7 +271,7 @@ textarea {
   color: var(--light-color);
   display: grid;
   grid-template-columns: 100%;
-  height: 50vh;
+  height: 58vh;
   grid-template-rows: 1fr;
   justify-items: start;
   align-items: center;
@@ -302,11 +298,17 @@ textarea {
 }
 
 .articles-container .card {
+  padding: 0;
+  display: grid;
+}
+
+.articles-container .content {
   display: grid;
   align-content: center;
   justify-items: left;
   text-align: left;
   grid-gap: 1rem;
+  padding: 1rem;
 }
 
 /* The following is grabbing the first and last article elements */
@@ -315,7 +317,6 @@ textarea {
   grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
   align-items: center;
 }
 
@@ -345,7 +346,6 @@ footer img {
   max-width: 150px;
 }
 footer .copyright {
-  grid-column: 1 / span 4;
   justify-self: center;
   width: 100%;
   padding: 20px;
@@ -353,39 +353,28 @@ footer .copyright {
   background: rgb(67, 67, 67);
 }
 
-footer .grid {
-  width: 100%;
-  grid-gap: 1rem;
+@media screen and (min-width: 900px) {
+  footer .copyright {
+    grid-column: 1 / span 4;
+  }
 }
 
 footer ul li {
   width: 100%;
   border-bottom: var(--light-color) 1px solid;
+  text-align: start;
 }
 
-/* About Us */
-
-.page-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  /* grid-template-rows: 1fr; */
-  grid-gap: 1rem;
-}
-
-.page-container .main-content {
-  grid-row: 1 / span 3;
-}
-
-/* article */
+/* About Us & Article Page */
 
 .article-grid {
   display: grid;
-  grid-gap: 1rem;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
 }
 
 .article-grid .content {
-  grid-area: 1 / 1 / span 3 / span 1;
+  grid-row: 1 / span 3;
   display: grid;
   grid-gap: 1rem;
   align-items: start;
@@ -428,59 +417,67 @@ input[type="radio"] {
   transform: scale(1.1);
 }
 
-/* new article */
+/* new article with Javascript for Homepage*/
 
 /* copy articles page */
 .articles-container-2 {
-  /* width: 400px; */
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* background: white; */
   grid-gap: 1rem;
-  justify-items: center;
-  align-content: center;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 .articles-container-2 .card {
+  background: white;
+  border: rgba(67, 67, 67, 0.2) 2px solid;
+  border-radius: 10px;
   display: grid;
-  align-content: center;
-  justify-items: left;
-  text-align: left;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  padding: 1rem;
   grid-gap: 1rem;
-  border: burlywood 1px solid;
 }
 
-/* The following is grabbing the first and last article elements */
-.articles-container-2 > *:first-child,
-.articles-container-2 > *:nth-last-child(1):nth-child(even) {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+.articles-container-2 img {
+  max-height: 300px;
+  margin: auto;
 }
 
-/* the next line applied css only to the last article element if it is even */
-.articles-container-2 > *:nth-last-child(1):nth-child(even) .content {
-  grid-area: 1/1/2/2;
-}
-
-.articles-container-2 > *:nth-child(1),
-.articles-container-2 > *:nth-last-child(1) {
-  background: var(--primary-color);
-}
-
-.articles-container-2 > *:first-child .content,
-.articles-container-2 > *:nth-last-child(1):nth-child(even) .content {
-  padding: 2rem 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-around;
-}
-
-.articles-container-2 .content {
+.articles-container-2 .card .content {
   display: grid;
   grid-gap: 1rem;
   justify-items: start;
+  text-align: start;
+  padding: 0rem 1rem;
+}
+
+@media screen and (min-width: 901px) {
+  /* The following is grabbing the first and last article elements */
+  .articles-container-2 > *:first-child,
+  .articles-container-2 > *:nth-last-child(1):nth-child(even) {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* grid-gap: 2rem; */
+  }
+
+  /* the next line applied css only to the last article element if it is even */
+  .articles-container-2 > *:nth-last-child(1):nth-child(even) .content {
+    grid-area: 1/1/2/2;
+  }
+
+  .articles-container-2 > *:nth-child(1),
+  .articles-container-2 > *:nth-last-child(1) {
+    background: var(--primary-color);
+  }
+
+  .articles-container-2 > *:first-child .content,
+  .articles-container-2 > *:nth-last-child(1):nth-child(even) .content {
+    /* padding: 2rem 0rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+  }
 }

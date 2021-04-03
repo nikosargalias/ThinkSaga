@@ -13,7 +13,7 @@ function renderArticlesHomePage({
     const image = articleImages[article.id];
     articlesContainer.innerHTML += `
         <article class="card">
-        <img style="max-width: 500px; max-height: 250px; margin:auto;" src="${image.imgData}" alt="" />
+        <img  src="${image.imgData}" alt="" />
         <div class="content">
           <div class="category">${article.category}</div>
           <a href="./article.html#${article.id}">
