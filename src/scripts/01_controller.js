@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const article = articles[id];
     const image = articleImages[id];
 
-    const deleteFormButton = document.getElementById("delete-form");
+    const deleteFormButton = document.getElementById("delete-article");
     deleteFormButton.onclick = onClickDeleteArticleButton;
 
     const editArticleFormElem = document.querySelector("#edit-article");
@@ -96,7 +96,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function onClickDeleteArticleButton(e) {
-      e.preventDefault();
       deleteArticle(id);
     }
   }
