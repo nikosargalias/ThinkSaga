@@ -1,5 +1,5 @@
 import { loadFromLocalStorage, saveToLocalStorage } from "./localStorage.js";
-import ArticleClass from "./ArticleClass.js";
+import Article from "./ArticleClass.js";
 const articles = loadFromLocalStorage("articles") || {};
 const articleImages = loadFromLocalStorage("images") || {};
 const ids = loadFromLocalStorage("ids") || [];
@@ -17,7 +17,7 @@ function generateId() {
 }
 
 function createArticle({ title, author, body, category }, id) {
-  const article = new ArticleClass({
+  const article = new Article({
     title: title.value,
     author: author.value,
     body: body,
@@ -28,11 +28,17 @@ function createArticle({ title, author, body, category }, id) {
   // return article;
 }
 
-function editArticle(article, { title, author, category, body }) {
-  article.title = title.value;
-  article.author = author.value;
+function deleteArticle(id) {
+  delete articles[id];
+  saveToLocalStorage("articles", articles);
+}
+
+function editArticle({ article, title, author, category, body }) {
+  article.title = title;
+  article.author = author;
+  article.category = category;
   article.body = body;
-  article.category = category.value;
+  console.log(title, author);
   saveArticleToDatabase(article);
 }
 
@@ -70,4 +76,11 @@ function saveArticleToDatabase(article) {
   saveToLocalStorage("articles", articles);
 }
 
-export { generateId, createArticle, saveImgData, editArticle, updateImgData };
+export {
+  generateId,
+  createArticle,
+  saveImgData,
+  editArticle,
+  updateImgData,
+  deleteArticle,
+};

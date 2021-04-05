@@ -53,7 +53,7 @@
     align-items: center;
   }
 
-  .articles-container-2 img {
+  .articles-container-2 .img-container {
     max-height: 200px;
     margin: auto;
   }

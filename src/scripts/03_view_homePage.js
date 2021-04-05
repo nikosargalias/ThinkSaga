@@ -13,8 +13,10 @@ function renderArticlesHomePage({
     const article = articles[prop];
     const image = articleImages[article.id];
     articlesContainer.innerHTML += `
-        <article class="card">
-        <img  src="${image.imgData}" alt="" />
+      <article class="card">
+        <figure class="img-container">
+          <img  src="${image.imgData}" alt="" />
+          </figure>
         <div class="content">
           <div class="category">${article.category}</div>
           <a href="./article.html#${article.id}">

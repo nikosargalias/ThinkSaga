@@ -161,6 +161,7 @@ textarea {
   border-radius: 40px;
   text-align: center;
   color: var(--light-color);
+  height: 100%;
 }
 
 .card {
@@ -438,15 +439,20 @@ input[type="radio"] {
   grid-gap: 1rem;
 }
 
-.articles-container-2 img {
-  max-height: 300px;
+.articles-container-2 .img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
   margin: auto;
 }
 
 .articles-container-2 .card .content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-gap: 1rem;
-  justify-items: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   text-align: start;
   padding: 0rem 1rem;
 }

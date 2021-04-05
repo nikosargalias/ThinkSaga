@@ -4,8 +4,9 @@ import {
   saveImgData,
   editArticle,
   updateImgData,
+  deleteArticle,
 } from "./02_logic.js";
-import { loadFromLocalStorage } from "./localStorage.js";
+import { loadFromLocalStorage, saveToLocalStorage } from "./localStorage.js";
 import { renderArticlesHomePage } from "./03_view_homePage.js";
 import { renderArticle } from "./04_view_articlePage.js";
 import renderArticleData from "./05_edit-article-form";
@@ -59,21 +60,44 @@ window.addEventListener("DOMContentLoaded", () => {
     const id = window.location.hash.substring(1);
     const article = articles[id];
     const image = articleImages[id];
+
+    const deleteFormButton = document.getElementById("delete-form");
+    deleteFormButton.onclick = onClickDeleteArticleButton;
+
     const editArticleFormElem = document.querySelector("#edit-article");
     renderArticleData(editArticleFormElem, article, image);
 
     const form = document
       .querySelector("#edit-article")
-      .addEventListener("submit", editArticleForm);
+      .addEventListener("submit", handleEditArticleSubmission);
 
-    function editArticleForm(e) {
+    function handleEditArticleSubmission(e) {
       e.preventDefault();
-      const newArticleBody = CKEDITOR.instances.editor1.getData();
-      const newImage = e.target.elements.image.value;
-      const { title, author, category } = e.target.elements;
-      editArticle(article, { title, author, category, body: newArticleBody });
-      updateImgData(newImage, id);
+      const data = {
+        article: article,
+        title: e.target.elements.title.value,
+        author: e.target.elements.author.value,
+        category: e.target.elements.category.value,
+        body: CKEDITOR.instances.editor1.getData(),
+        newImage: e.target.elements.image.value,
+      };
+      updateArticle(data, id);
+      redirect(id);
+    }
+
+    function updateArticle(data, id) {
+      const image = data.newImage;
+      editArticle(data);
+      updateImgData(image, id);
+    }
+
+    function redirect(id) {
       window.location.assign(`./article.html#${id}`);
+    }
+
+    function onClickDeleteArticleButton(e) {
+      e.preventDefault();
+      deleteArticle(id);
     }
   }
 });
