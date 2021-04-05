@@ -9,6 +9,7 @@ function renderArticlesHomePage({
   articlesContainer,
 }) {
   for (const prop in articles) {
+    console.log(articles);
     const article = articles[prop];
     const image = articleImages[article.id];
     articlesContainer.innerHTML += `

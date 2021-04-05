@@ -59,10 +59,10 @@
     <!-- main -->
     <main>
       <div class="article-grid container padding-2">
-        <form id="submit-article" class="content card" action="">
-          <h1>Create Your Blog Post</h1>
+        <form id="edit-article" class="content card" action="">
+          <h1>Edit Your Blog Post</h1>
           <label for="article-name"
-            ><h4>Article Name</h4>
+            ><h4>Article Title</h4>
             <input required type="text" name="title" id="article-name" />
           </label>
           <label for="author-name"
@@ -130,17 +130,17 @@
             <textarea name="editor1" id="editor1" cols="30" rows="10">
             </textarea>
           </label>
+          <label for="current-img">
+            Current Image
+            <img name="current-img" id="current-img" src="#" alt="" />
+          </label>
           <label for="image">
-            <input
-              type="file"
-              id="image"
-              name="image"
-              accept="image/*"
-              required
-            />
+            Choose New Image
+            <input type="file" id="image" name="image" accept="image/*" />
           </label>
           <button type="submit" class="btn">Submit</button>
         </form>
+
         <aside class="categories card">
           <h2>categories</h2>
           <ul>

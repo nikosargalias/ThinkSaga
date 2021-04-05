@@ -7,16 +7,16 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
     </style>
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/83087b65bd.js"
       crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./styles/style.css" />
+    ></script> -->
+    <!-- <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
       media="screen and (max-width: 768px)"
       href="./styles/mobile.css"
-    />
+    /> -->
     <link
       rel="shortcut icon"
       href="./image_resources/favicon/think-saga-fav.jpg"
@@ -26,15 +26,15 @@
   </head>
   <body>
     <header role="navigation" class="header-nav">
-        <figure class="img-container">
-            <a href="./index.html">
-              <img
-                  src="./image_resources/think-saga-light-logo.png"
-                  alt="think-saga-logo"
-                  class="logo"
-                />
-          </a>
-          </figure>
+      <figure class="img-container">
+        <a href="./index.html">
+          <img
+            src="./image_resources/think-saga-light-logo.png"
+            alt="think-saga-logo"
+            class="logo"
+          />
+        </a>
+      </figure>
       <div class="social">
         <a href="https://facebook.com/thinksaga" target="_blank"
           ><i class="fab fa-facebook fa-2x"></i
@@ -68,13 +68,13 @@
           </figure>
           <h1 id="title">Lorem ipsum dolor</h1>
           <div class="meta">
-            <i class="fas fa-user">
-              <span id="author"></span>
-            </i>
+            <span><i class="fas fa-user"></i> <span id="author"></span></span>
             <div id="category" class="category"></div>
           </div>
           <p id="body"></p>
+          <a id="edit-article" class="btn" href="#">Edit Article</a>
         </section>
+
         <aside class="categories card">
           <h2>categories</h2>
           <ul>
@@ -116,15 +116,15 @@
               veniam ullam, itaque eos ipsum error.
             </p>
           </section>
-          <section >
+          <section>
             <form action="" class="grid">
-            <h3>Email Newsletter</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-              incidunt!
-            </p>
+              <h3>Email Newsletter</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis, incidunt!
+              </p>
               <input type="email" placeholder="Email" />
-              <button type="submit" subscribe" class="btn btn-primary">Subscribe</button>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
           </section>
           <section class="grid" class="footer-nav">
@@ -138,18 +138,19 @@
           </section>
           <section class="grid">
             <h3>Join Our Club</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ullam.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              ullam.
+            </p>
             <button href="" class="btn btn-secondary">Join Now</button>
           </section>
           <section class="copyright">
-            <p>
-              Copyright &copy; 2021, All Rights Reserved
-            </p>
+            <p>Copyright &copy; 2021, All Rights Reserved</p>
           </section>
         </div>
       </footer>
-      <script type="module" src="./scripts/localStorage.js"></script>
-      <script type="module" src="./scripts/01_controller.js"></script>
+      <!-- <script type="module" src="./scripts/localStorage.js"></script>
+      <script type="module" src="./scripts/01_controller.js"></script> -->
       <!-- <script type="module" src="./scripts/index.js"></script> -->
     </main>
   </body>

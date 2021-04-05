@@ -222,6 +222,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 50px;
+  width: 100%;
   justify-items: center;
   justify-content: center;
   align-items: center;
@@ -229,8 +230,9 @@ textarea {
   color: var(--light-color);
 }
 
-.header-nav img {
-  transform: scale(0.5);
+.header-nav .img-container {
+  padding: 1.2rem;
+  height: 80px;
 }
 
 .header-nav .social a {
@@ -461,7 +463,7 @@ input[type="radio"] {
     /* grid-gap: 2rem; */
   }
 
-  /* the next line applied css only to the last article element if it is even */
+  /* the next line applies css only to the last article element if it is even and puts the image to the right */
   .articles-container-2 > *:nth-last-child(1):nth-child(even) .content {
     grid-area: 1/1/2/2;
   }

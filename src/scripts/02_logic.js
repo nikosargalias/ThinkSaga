@@ -20,12 +20,26 @@ function createArticle({ title, author, body, category }, id) {
   const article = new ArticleClass({
     title: title.value,
     author: author.value,
-    body: body.value,
+    body: body,
     category: category.value,
     id: id,
   });
   saveArticleToDatabase(article);
-  return article;
+  // return article;
+}
+
+function editArticle(article, { title, author, category, body }) {
+  article.title = title.value;
+  article.author = author.value;
+  article.body = body;
+  article.category = category.value;
+  saveArticleToDatabase(article);
+}
+
+function updateImgData(newImg, id) {
+  if (newImg) {
+    saveImgData(id);
+  }
 }
 
 function saveImgData(id) {
@@ -56,4 +70,4 @@ function saveArticleToDatabase(article) {
   saveToLocalStorage("articles", articles);
 }
 
-export { generateId, createArticle, saveImgData };
+export { generateId, createArticle, saveImgData, editArticle, updateImgData };
