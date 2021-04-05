@@ -13,10 +13,10 @@ function renderArticle(article, image) {
   const authorElem = document.querySelector("#author");
   const bodyElem = document.querySelector("#body");
   const categoryElem = document.querySelector("#category");
-  titleElem.innerHTML = article.title;
-  authorElem.innerHTML = article.author;
-  bodyElem.innerHTML = article.body;
-  categoryElem.innerHTML = article.category;
+  titleElem.textContent = article.title;
+  authorElem.textContent = article.author;
+  bodyElem.textContent = article.body;
+  categoryElem.textContent = article.category;
   articleImgElem.src = image.imgData;
 }
 // });

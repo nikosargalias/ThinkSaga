@@ -36,7 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  console.log(window.location.pathname == pages.singleArticlePage);
   if (window.location.pathname == pages.singleArticlePage) {
     const id = window.location.hash.substring(1);
     const article = articles[id];

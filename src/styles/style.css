@@ -12,7 +12,7 @@ html * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: visible;
 }
 
 .category {
@@ -221,8 +221,7 @@ textarea {
   z-index: 1000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 8vh;
-  height: 8vh;
+  min-height: 50px;
   justify-items: center;
   justify-content: center;
   align-items: center;
@@ -353,7 +352,7 @@ footer .copyright {
   background: rgb(67, 67, 67);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 901px) {
   footer .copyright {
     grid-column: 1 / span 4;
   }
