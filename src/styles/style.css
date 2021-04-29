@@ -254,21 +254,13 @@ textarea {
 
 /* hero */
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../image_resources/hero-background\ \(1\).png") no-repeat
-    center center/cover;
-  z-index: -1;
-}
-
 .hero {
   position: relative;
-  background: rgba(36, 36, 36, 0.8);
+  background-image: url("../image_resources/hero-background-lightbuld.png");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(36, 36, 36, 0.7);
+  background-blend-mode: multiply;
   color: var(--light-color);
   display: grid;
   grid-template-columns: 100%;
