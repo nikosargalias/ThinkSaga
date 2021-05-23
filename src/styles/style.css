@@ -365,6 +365,13 @@ footer ul li {
 
 /* About Us & Article Page */
 
+.about,
+.article,
+.upload-article,
+.edit-article {
+  min-height: 70.5vh;
+}
+
 .article-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
