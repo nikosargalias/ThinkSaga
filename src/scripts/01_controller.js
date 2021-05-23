@@ -1,4 +1,8 @@
 import {
+  saveImgData2,
+  createInitialArticle,
+} from "./00_render-initial-article";
+import {
   generateId,
   createArticle,
   saveImgData,
@@ -24,6 +28,7 @@ const pages = {
 
 window.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname == pages.homePage) {
+    // createInitialArticle();
     renderArticlesHomePage({
       articles,
       articleImages,

@@ -4,6 +4,8 @@ const articles = loadFromLocalStorage("articles") || {};
 const articleImages = loadFromLocalStorage("images") || {};
 const ids = loadFromLocalStorage("ids") || [];
 
+console.log(articleImages);
+
 function generateId() {
   const ids = loadFromLocalStorage("ids");
   let newId;

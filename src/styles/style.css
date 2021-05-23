@@ -35,7 +35,7 @@ body * {
 
 /* Main - to compensate for fixed header */
 main {
-  padding: 8vh 0vh 0vh 0vh;
+  padding: 100px 0vh 0vh 0vh;
 }
 
 a {
@@ -91,7 +91,7 @@ p {
 }
 
 input {
-  padding: 1rem 0.2rem;
+  padding: 1rem 1.5rem !important;
 }
 textarea {
   padding: 0rem 0.2rem;
@@ -100,6 +100,9 @@ textarea {
 /* padding */
 .padding-2 {
   padding: 2rem;
+}
+.padding-5 {
+  padding: 5rem 2rem;
 }
 
 /* Utilities */
@@ -221,7 +224,7 @@ textarea {
   z-index: 1000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  min-height: 50px;
+  min-height: 100px;
   width: 100%;
   justify-items: center;
   justify-content: center;
@@ -289,6 +292,7 @@ textarea {
   grid-gap: 1rem;
   justify-items: center;
   align-content: center;
+  /* padding: 5rem 0; */
 }
 
 .articles-container .card {
