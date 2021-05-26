@@ -16,7 +16,7 @@ function createInitialArticle() {
     saveImgData2(newId, imgData);
     createArticle(
       {
-        title: { value: "Hellosss" },
+        title: { value: "Template Article" },
         author: { value: "Nikos" },
         body: "lorem",
         category: { value: "Technology" },
